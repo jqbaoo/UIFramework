@@ -1,0 +1,21 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class lzh : MonoBehaviour {
+
+	// Use this for initialization
+	string str="叼雷楼某";
+<<<<<<< .mine    void Start()
+    {
+        string str = "辣鸡玩意";
+    }
+	
+=======    void Start()
+    {
+        string str = "垃圾玩意";
+    }
+>>>>>>> .theirs	// Update is called once per frame
+	void Update () {
+	
+	}
+}

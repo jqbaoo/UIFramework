@@ -1,0 +1,16 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class lalala : MonoBehaviour {
+    private  string P ;
+	// Use this for initialization
+	void Start () {
+        P = "HAHAHA";
+      
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}

@@ -1,0 +1,32 @@
+﻿using UnityEngine;
+using System.Collections;
+
+//窗体的显示方式
+public enum E_ShowUIMode
+{   
+    //界面显示出来的时候,不需要去隐藏其他窗体(InforUI)
+    DoNothing,
+    //界面显示出来的时候,需要去隐藏其他窗体(但是不隐藏保持在最前方的窗体)
+    HideOther,
+    //界面显示出来的时候,需要去隐藏所有的窗体
+    HideAll
+}
+//窗体的层级类型(父节点的类型)
+public enum E_UIRootType
+{
+    KeepAbove,//保持在前方的窗体(DoNothing)
+    Normal//普通窗体(1、HideOther 2、HideAll)
+}
+//窗体的ID
+public enum E_UiId
+{ 
+  NullUI,
+  MainUI,
+  InforUI,
+  LevelUI
+}
+public class GameDefine
+{
+
+
+}

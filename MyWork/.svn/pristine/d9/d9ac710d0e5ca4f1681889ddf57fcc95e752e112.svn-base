@@ -1,0 +1,17 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class lzh : MonoBehaviour 
+{
+
+	// Use this for initialization
+	string str="叼雷楼某";
+    void Start()
+    {
+        string str = "辣鸡玩意";
+    }
+// Update is called once per frame
+	void Update () {
+	
+	}
+}

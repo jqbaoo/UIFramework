@@ -1,0 +1,33 @@
+﻿using UnityEngine;
+using System.Collections;
+using GameCore;
+using UnityEngine.UI;
+
+public class LevelUI : BaseUI {
+
+    private Button btn_Return;
+    private Button btn_ToPackUI;
+    protected override void InitUiOnAwake()
+    {
+        base.InitUiOnAwake();
+        btn_Return = GameTool.GetTheChildComponent<Button>(this.gameObject, "Btn_Return");
+        btn_ToPackUI= GameTool.GetTheChildComponent<Button>(this.gameObject, "Btn_ToPackUI"); 
+        btn_Return.onClick.AddListener(ReturnUI);
+        btn_ToPackUI.onClick.AddListener(ToPackUI);
+    }
+    protected override void InitDataOnAwake()
+    {
+        base.InitDataOnAwake();
+        this.uiId = E_UiId.LevelUI;
+        this.uiType.showMode = E_ShowUIMode.HideOther;
+    }
+    private void ReturnUI()
+    {
+        //UIManager.Instance.ShowUI(this.BeforeUiId);
+        UIManager.Instance.ReturnBeforeUI(this.BeforeUiId);
+    }
+    private void ToPackUI()
+    {
+        UIManager.Instance.ShowUI(E_UiId.PackUI);
+    }
+}

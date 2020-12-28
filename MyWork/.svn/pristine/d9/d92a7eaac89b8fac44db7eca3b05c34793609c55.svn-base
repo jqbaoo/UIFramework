@@ -1,0 +1,47 @@
+﻿using UnityEngine;
+using System.Collections;
+using GameCore;
+using UnityEngine.UI;
+
+public class PackUI : BaseUI
+{
+    private Button btn_Return;
+    private GameObject goodsPrefab;
+    private Transform content;
+    protected override void InitUiOnAwake()
+    {
+        base.InitUiOnAwake();
+        goodsPrefab = Resources.Load<GameObject>("GoodsPrefab/Goods");
+        btn_Return = GameTool.GetTheChildComponent<Button>(this.gameObject, "Btn_Return");
+        content = GameTool.FindTheChild(this.gameObject,"Content");
+        btn_Return.onClick.AddListener(ReturnUI);
+    }
+  
+    protected override void InitDataOnAwake()
+    {
+        base.InitDataOnAwake();
+        this.uiId = E_UiId.PackUI;
+        StartCoroutine(InitPack());
+     
+    }
+   IEnumerator InitPack()
+    {
+        yield return  new WaitForEndOfFrame();
+        GameObject goods;
+        string iconName;
+        for (int i = 0; i < 22; i++)
+        {  
+          //生成一个物品
+          goods =  Instantiate(goodsPrefab);
+           //放在content下面
+          GameTool.AddChildToParent(content, goods.transform);
+           //通过读取配置表,获取图片的名称
+           iconName = DataController.Instance.ReadCfg("IconName",i+1,DataController.Instance.dicPack);
+            GameTool.GetTheChildComponent<Image>(goods, "Img_Goods").sprite = Resources.Load<Sprite>("PackSprite/"+ iconName);
+        }
+    }
+    private void ReturnUI()
+    {
+        UIManager.Instance.ReturnBeforeUI(this.BeforeUiId);
+    }
+}

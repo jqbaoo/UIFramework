@@ -1,0 +1,10 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class GameStart : MonoBehaviour {
+
+    void Awake()
+    {
+        DataController.Instance.LoadAllCfg();
+    }
+}

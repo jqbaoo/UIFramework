@@ -1,0 +1,18 @@
+﻿using UnityEngine;
+using System.Collections;
+using GameCore;
+
+public class InforUI : BaseUI
+{
+    protected override void InitUiOnAwake()
+    {
+        base.InitUiOnAwake();
+    }
+    protected override void InitDataOnAwake()
+    {
+        base.InitDataOnAwake();
+        this.uiId = E_UiId.InforUI;
+        this.uiType.showMode = E_ShowUIMode.DoNothing;
+        this.uiType.uiRootType = E_UIRootType.KeepAbove;
+    }
+}

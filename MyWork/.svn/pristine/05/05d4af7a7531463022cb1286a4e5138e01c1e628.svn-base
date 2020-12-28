@@ -1,0 +1,13 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class xlb : MonoBehaviour {
+
+	// Use this for initialization
+	string str = "傻逼紫红x2";
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}

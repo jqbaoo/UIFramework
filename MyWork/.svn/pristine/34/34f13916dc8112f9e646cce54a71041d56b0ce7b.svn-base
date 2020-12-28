@@ -1,0 +1,14 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class zdc : MonoBehaviour {
+
+    void Start() 
+    {
+        int num = 300;
+    }
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}

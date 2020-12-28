@@ -1,0 +1,16 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class lzq : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+        int num = 800;
+        string stete = "asdioqasdabfaodqaw";
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}

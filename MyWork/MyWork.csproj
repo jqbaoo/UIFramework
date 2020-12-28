@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F474ADBE-80B7-341B-FED0-0035165C7C4C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectGenerator>VSTU</UnityProjectGenerator>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>5.3.4f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_3_4;UNITY_5_3;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_3_4;UNITY_5_3;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="GameDebuger">
+      <HintPath>Assets/Plugins/GameDebuger.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\AdvancedExamples\AutoSelect\MultiLayerTouch.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\AdvancedExamples\AutoSelect\MultiLayerUI.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\AdvancedExamples\MultiCamera\MultiCameraTouch.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\AdvancedExamples\MultiCamera\MultiCameraUI.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\GameExemple\RTSExample\CubeSelect.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\GameExemple\RTSExample\RTSCamera.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\GameExemple\RunBall\Ball.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\GameExemple\RunBall\BallRunPlayer.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\GameExemple\RunBall\ThirdPersonCamera.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\LoadExamples.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\MultiFinger\FingerTouch.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\MultiFinger\MutliFingersScreenTouch.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\OneFinger\DoubleTapMe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\OneFinger\DragMe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\OneFinger\LongTapMe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\OneFinger\Swipe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\OneFinger\TapMe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\OneFinger\TouchMe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\PinchMe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TooglePickMethodUI.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwistMe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwoDoubleTapMe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwoDragMe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwoLongTapMe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwoSwipe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwoTapMe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\SimpleExamples\TwoFingers\TwoTouchMe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UICompatibility\ETWindow.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UICompatibility\GlobalEasyTouchEvent.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UICompatibility\UICompatibility.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UICompatibility\UIWindow.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UITwistPinch\UIDrag.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UITwistPinch\UIPinch.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\UnityUI\UITwistPinch\UITwist.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\5.X new features\Script\RTS_NewSyntaxe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\5.X new features\Script\SimpleActionExample.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\EasyTouchTrigger.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickBase.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickDrag.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickEnterOverExist.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickLongTap.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickPinch.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickSwipe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTap.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTouch.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTwist.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\BaseFinger.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\ECamera.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouch.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouchInput.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\Finger.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\Gesture.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\TwoFingerGesture.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Component\ETCSetDirectActionTransform.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\Button-Event-Input\ButtonInputUI.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\Button-Event-Input\ButtonUIEvent.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\ControlEventInput\ControlUIEvent.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\ControlEventInput\ControlUIInput.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\DPadClassicalTime\DPadParameterUI.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\FPSExample\FPSPlayerControl.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\FPSExample\ImpactEffect.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\JoystickParameter\AxisXUi.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\LoadLevelScript.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 1.X\TouchPad-Event-Input\TouchPadUIEvent.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 2.X_New Features\Script\CharacterAnimation.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Version 2.X_New Features\Script\CharacterAnimationDungeon.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\_Medias\SliderText.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ComponentExtensions.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCArea.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCAxis.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCBase.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCButton.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCDPad.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCInput.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCJoystick.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCTouchPad.cs" />
+    <Compile Include="Assets\Script\Core\BaseUI.cs" />
+    <Compile Include="Assets\Script\Core\CoroutineController.cs" />
+    <Compile Include="Assets\Script\Core\DataController.cs" />
+    <Compile Include="Assets\Script\Core\EventController.cs" />
+    <Compile Include="Assets\Script\Core\EventDispatcher.cs" />
+    <Compile Include="Assets\Script\Core\ExcelData.cs" />
+    <Compile Include="Assets\Script\Core\GameDebuger.cs" />
+    <Compile Include="Assets\Script\Core\GameDefine.cs" />
+    <Compile Include="Assets\Script\Core\GameInterface.cs" />
+    <Compile Include="Assets\Script\Core\GameStart.cs" />
+    <Compile Include="Assets\Script\Core\GameTool.cs" />
+    <Compile Include="Assets\Script\Core\MessageCenter.cs" />
+    <Compile Include="Assets\Script\Core\Singleton.cs" />
+    <Compile Include="Assets\Script\Core\UIManager.cs" />
+    <Compile Include="Assets\Script\Core\UguiEventListener.cs" />
+    <Compile Include="Assets\Script\Data\InforData.cs" />
+    <Compile Include="Assets\Script\Data\PackData.cs" />
+    <Compile Include="Assets\Script\Data\PlayerData.cs" />
+    <Compile Include="Assets\Script\UI\ChangePage.cs" />
+    <Compile Include="Assets\Script\UI\ExitUI.cs" />
+    <Compile Include="Assets\Script\UI\GoodsEntity.cs" />
+    <Compile Include="Assets\Script\UI\InforUI.cs" />
+    <Compile Include="Assets\Script\UI\LevelEntity.cs" />
+    <Compile Include="Assets\Script\UI\LevelUI.cs" />
+    <Compile Include="Assets\Script\UI\LoadingUI.cs" />
+    <Compile Include="Assets\Script\UI\MainUI.cs" />
+    <Compile Include="Assets\Script\UI\NoticeUI.cs" />
+    <Compile Include="Assets\Script\UI\PackUI.cs" />
+    <Compile Include="Assets\Script\UI\PlayUI.cs" />
+    <Compile Include="Assets\Script\UI\PlayerUI.cs" />
+    <Compile Include="Assets\Test.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\BloomOptimized.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\BlurOptimized.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\CameraMotionBlur.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\ColorCorrectionCurves.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\ColorCorrectionLookup.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\ContrastEnhance.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\CreaseShading.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\DepthOfField.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\DepthOfFieldDeprecated.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\EdgeDetection.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\Fisheye.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\GlobalFog.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\NoiseAndGrain.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsBase.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsHelper.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\Quads.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\ScreenOverlay.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\ScreenSpaceAmbientObscurance.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\SunShafts.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\TiltShift.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\Tonemapping.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\Triangles.cs" />
+    <Compile Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\EasyTouchBundle\EasyTouch\How to migrate from EasyTouch 4.X.txt" />
+    <None Include="Assets\EasyTouchBundle\EasyTouch\RealseNotes.txt" />
+    <None Include="Assets\EasyTouchBundle\EasyTouch\_Documentation\How to migrate from EasyTouch 4.X.txt" />
+    <None Include="Assets\EasyTouchBundle\EasyTouchControls\Documentation\Version 2.0.txt" />
+    <None Include="Assets\EasyTouchBundle\EasyTouchControls\Issues in button behavior (MAC).txt" />
+    <None Include="Assets\EasyTouchBundle\EasyTouchControls\ReleaseNotes.txt" />
+    <None Include="Assets\EasyTouchBundle\Readme.txt" />
+    <None Include="Assets\Resources\Cfg\LevelCfg.txt" />
+    <None Include="Assets\Resources\Cfg\NoticeCfg.txt" />
+    <None Include="Assets\Resources\Cfg\PackCfg.txt" />
+    <None Include="Assets\Resources\Cfg\PlayerCfg.txt" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+    <None Include="Assets\TheModel\L_FG_Assets_Pack_Lite\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>

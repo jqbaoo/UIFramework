@@ -1,0 +1,15 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class Hxh : MonoBehaviour {
+
+	// Use this for initialization
+    void Start()
+    {
+        string hxh = "最骚";
+    }
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}

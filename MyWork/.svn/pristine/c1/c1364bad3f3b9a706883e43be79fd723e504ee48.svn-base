@@ -1,0 +1,41 @@
+﻿using UnityEngine;
+using System.Collections;
+using GameCore;
+using UnityEngine.UI;
+
+public class PackUI : BaseUI
+{
+    private Button btn_Return;
+    private GameObject goodsPrefab;
+    private Transform content;
+    protected override void InitUiOnAwake()
+    {
+        base.InitUiOnAwake();
+        goodsPrefab = Resources.Load<GameObject>("GoodsPrefab/Goods");
+        btn_Return = GameTool.GetTheChildComponent<Button>(this.gameObject, "Btn_Return");
+        content = GameTool.FindTheChild(this.gameObject,"Content");
+        btn_Return.onClick.AddListener(ReturnUI);
+    }
+  
+    protected override void InitDataOnAwake()
+    {
+        base.InitDataOnAwake();
+        this.uiId = E_UiId.PackUI;
+        StartCoroutine(InitPack());
+       // InitPack();
+    }
+   IEnumerator InitPack()
+    {
+        yield return  new WaitForEndOfFrame();
+        for (int i = 0; i < 22; i++)
+        {
+          GameObject go=  Instantiate(goodsPrefab);
+          GameTool.AddChildToParent(content,go.transform);
+       
+        }
+    }
+    private void ReturnUI()
+    {
+        UIManager.Instance.ReturnBeforeUI(this.BeforeUiId);
+    }
+}

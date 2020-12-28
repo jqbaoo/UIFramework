@@ -1,0 +1,18 @@
+﻿using UnityEngine;
+using System.Collections;
+using GameCore;
+
+public class LevelUI : BaseUI {
+
+    protected override void InitUiOnAwake()
+    {
+        base.InitUiOnAwake();
+    }
+    protected override void InitDataOnAwake()
+    {
+        base.InitDataOnAwake();
+        this.uiId = E_UiId.LevelUI;
+        this.uiType.showMode = E_ShowUIMode.HideOther;
+    }
+
+}

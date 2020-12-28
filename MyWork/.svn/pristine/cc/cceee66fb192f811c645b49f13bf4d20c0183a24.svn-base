@@ -1,0 +1,17 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class GameStart : MonoBehaviour {
+
+    void Awake()
+    {   
+        //加载所有到配置表到内存里面
+        DataController.Instance.LoadAllCfg();
+        //初始化数据
+        LoadData();
+    }
+    private void LoadData()
+    {
+        PackData.Instance.InitPackData();
+    }
+}

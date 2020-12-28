@@ -1,0 +1,17 @@
+﻿using UnityEngine;
+using System.Collections;
+using GameCore;
+
+public class PlayUI : BaseUI {
+
+    protected override void InitUiOnAwake()
+    {
+        base.InitUiOnAwake();
+    }
+    protected override void InitDataOnAwake()
+    {
+        base.InitDataOnAwake();
+        this.uiId = E_UiId.PlayUI;
+        this.uiType.showMode = E_ShowUIMode.HideAll;
+    }
+}

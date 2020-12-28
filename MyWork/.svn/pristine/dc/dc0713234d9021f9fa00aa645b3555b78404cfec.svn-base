@@ -1,0 +1,9 @@
+﻿using UnityEngine;
+using System.Collections;
+using GameCore;
+public class InforData : Singleton<InforData>
+{
+
+    public int coinCount = 0;
+	
+}

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+<<<<<<< .mine
+guid: 64272497c2b6d814c90a43702d22f4c9
+timeCreated: 1554359678
+licenseType: Pro
+||||||| .r76
+guid: 3a055735e2d12344e94fb170a59965a3
+timeCreated: 1554359620
+licenseType: Free
+=======
+guid: 9db5a9313d5f19f48b054cc09be48b8e
+timeCreated: 1554358259
+licenseType: Free
+>>>>>>> .r78
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

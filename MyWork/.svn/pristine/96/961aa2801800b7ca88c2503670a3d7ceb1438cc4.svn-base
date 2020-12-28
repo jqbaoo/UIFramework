@@ -1,0 +1,29 @@
+﻿using UnityEngine;
+using System.Collections;
+using GameCore;
+using UnityEngine.UI;
+
+public class MainUI : BaseUI
+{
+    private Button btn_ToLevelUI;
+    //private GameObject btn_ToLevelUI;
+    protected override void InitUiOnAwake()
+    {
+        base.InitUiOnAwake();
+        btn_ToLevelUI = GameTool.GetTheChildComponent<Button>(this.gameObject, "Btn_ToLevelUI");
+        btn_ToLevelUI.onClick.AddListener(ToLevelUI);
+        //btn_ToLevelUI = GameTool.FindTheChild(this.gameObject, "Btn_ToLevelUI").gameObject;
+        //UguiEventListener.Get(btn_ToLevelUI).onClick = ToLevelUI;
+    }
+    protected override void InitDataOnAwake()
+    {
+        base.InitDataOnAwake();
+        this.uiId = E_UiId.MainUI;
+       
+    }
+    private void ToLevelUI()
+    {
+        // GameDebuger.Log("显示关卡窗体");
+        UIManager.Instance.ShowUI(E_UiId.LevelUI);
+    }
+}

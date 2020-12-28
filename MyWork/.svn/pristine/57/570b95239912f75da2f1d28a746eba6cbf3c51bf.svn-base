@@ -1,0 +1,11 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class GoodsEntity : MonoBehaviour
+{
+    //物品ID
+    public int goodsId;
+    //物品类型
+    public E_GoodsType type;
+	
+}

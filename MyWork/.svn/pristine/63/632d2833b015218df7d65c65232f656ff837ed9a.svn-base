@@ -1,0 +1,15 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class hsj : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+        Debug.LogError("Shader error in ‘Sprites/Mask’: undeclared identifier");
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	    
+	}
+}

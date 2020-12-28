@@ -1,0 +1,36 @@
+﻿using UnityEngine;
+using System.Collections;
+using GameCore;
+using UnityEngine.UI;
+
+public class PackUI : BaseUI
+{
+    private Button btn_Return;
+    private Button btn_Sell;
+    protected override void InitUiOnAwake()
+    {
+        base.InitUiOnAwake();
+        btn_Return = GameTool.GetTheChildComponent<Button>(this.gameObject, "Btn_Return");
+        btn_Sell = GameTool.GetTheChildComponent<Button>(this.gameObject, "Btn_Sell");
+        btn_Return.onClick.AddListener(ReturnUI);
+        btn_Sell.onClick.AddListener(Sell);
+    }
+    //int coinCount = 100;
+    private void Sell()
+    {
+        //出售某个物品,赚了100个金币
+        int coinCount = 100;
+        EventDispatcher.TriggerEvent<int>(E_MessageType.SellGoods,coinCount);
+    }
+    protected override void InitDataOnAwake()
+    {
+        base.InitDataOnAwake();
+        this.uiId = E_UiId.PackUI;
+        this.uiType.showMode = E_ShowUIMode.HideOther;
+    }
+    private void ReturnUI()
+    {
+       // UIManager.Instance.ShowUI(this.BeforeUiId);
+        UIManager.Instance.ReturnBeforeUI(this.BeforeUiId);
+    }
+}

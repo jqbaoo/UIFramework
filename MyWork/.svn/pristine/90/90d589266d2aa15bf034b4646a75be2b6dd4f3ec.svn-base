@@ -1,0 +1,25 @@
+﻿using UnityEngine;
+using System.Collections;
+using GameCore;
+using UnityEngine.UI;
+
+public class ExitUI : BaseUI {
+
+    private Button btn_Close;
+    protected override void InitUiOnAwake()
+    {
+        base.InitUiOnAwake();
+        btn_Close = GameTool.GetTheChildComponent<Button>(this.gameObject, "Btn_Close");
+        btn_Close.onClick.AddListener(Close);
+    }
+    protected override void InitDataOnAwake()
+    {
+        base.InitDataOnAwake();
+        this.uiId = E_UiId.ExitUI;
+        this.uiType.showMode = E_ShowUIMode.DoNothing;
+    }
+    private void Close()
+    {
+        UIManager.Instance.HideSingleUI(this.uiId);
+    }
+}

@@ -1,0 +1,62 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class Test : MonoBehaviour {
+
+    void Reset()
+    {
+        //Debug.Log("Reset");
+    }
+    void  Awake()
+    {
+        //Debug.Log("Awake");
+        //StartCoroutine(ShowPack());
+    }
+    void OnEnable()
+    {
+       // Debug.Log("OnEnable");
+
+    }
+	void Start ()
+    {
+        Debug.Log("Start");
+       // StartCoroutine(ShowPack());
+    }
+    IEnumerator ShowPack()
+    {
+        //yield return null;
+        //yield return new WaitForEndOfFrame();
+        Debug.Log("ShowPack0 ");
+        yield return new WaitForSeconds(1f);
+
+        Debug.Log("ShowPack1 ");
+        yield return new WaitForSeconds(2f);
+        Debug.Log("ShowPack2 ");
+    }
+    void FixedUpdate()
+    {
+        Debug.Log("FixedUpdate");
+    }
+    void Update()
+    {
+        Debug.Log("Update");
+        // StartCoroutine(ShowPack());//  yield return null;隔帧/偷帧
+        StartCoroutine(ShowPack());
+    }
+    void LateUpdate()
+    {
+        Debug.Log("LateUpdate");
+    }
+    void OnGUI()
+    {
+        Debug.Log("OnGUI");
+    }
+    void OnDisable()
+    {
+        Debug.Log("OnDisable");
+    }
+    void OnDestroy()
+    {
+        Debug.Log("OnDestroy");
+    }
+}

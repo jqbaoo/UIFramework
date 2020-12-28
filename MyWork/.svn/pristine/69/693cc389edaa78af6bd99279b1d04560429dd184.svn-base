@@ -1,0 +1,130 @@
+﻿using UnityEngine;
+using System.Collections;
+using GameCore;
+using UnityEngine.UI;
+
+public class PackUI : BaseUI
+{
+    private Button btn_Return;
+    private GameObject goodsPrefab;
+    private Transform content;
+    //五个物品分类按钮
+    private GameObject btn_All;
+    private GameObject btn_Equipment;
+    private GameObject btn_Potions;
+    private GameObject btn_Rune;
+    private GameObject btn_Material;
+    //被选中的物品类型
+    private E_GoodsType beChooseType = E_GoodsType.Default;
+    //当前显示的物品类型
+    //private E_GoodsType currentType = E_GoodsType.Default;
+    protected override void InitUiOnAwake()
+    {
+        base.InitUiOnAwake();
+        goodsPrefab = Resources.Load<GameObject>("GoodsPrefab/Goods");
+        btn_Return = GameTool.GetTheChildComponent<Button>(this.gameObject, "Btn_Return");
+        content = GameTool.FindTheChild(this.gameObject,"Content");
+        btn_Return.onClick.AddListener(ReturnUI);
+
+        btn_All = GameTool.FindTheChild(this.gameObject, "Btn_All").gameObject;
+        btn_Equipment = GameTool.FindTheChild(this.gameObject, "Btn_Equipment").gameObject;
+        btn_Potions = GameTool.FindTheChild(this.gameObject, "Btn_Potions").gameObject;
+        btn_Rune = GameTool.FindTheChild(this.gameObject, "Btn_Rune").gameObject;
+        btn_Material = GameTool.FindTheChild(this.gameObject, "Btn_Material").gameObject;
+
+        UguiEventListener.Get(btn_All).onClick = ChangeType;
+        UguiEventListener.Get(btn_Equipment).onClick = ChangeType;
+        UguiEventListener.Get(btn_Potions).onClick = ChangeType;
+        UguiEventListener.Get(btn_Rune).onClick = ChangeType;
+        UguiEventListener.Get(btn_Material).onClick = ChangeType;
+    }
+  
+    protected override void InitDataOnAwake()
+    {
+        base.InitDataOnAwake();
+        this.uiId = E_UiId.PackUI;
+        StartCoroutine(InitPack());
+     
+    }
+    private void ChangeType(GameObject go)
+    {
+        switch (go.name)
+        {
+            case "Btn_Equipment":
+                beChooseType = E_GoodsType.Equipment;
+                break;
+            case "Btn_Potions":
+                beChooseType = E_GoodsType.Potions;
+                break;
+            case "Btn_Rune":
+                beChooseType = E_GoodsType.Rune;
+                break;
+            case "Btn_Material":
+                beChooseType = E_GoodsType.Material;
+                break;
+            default:
+                beChooseType = E_GoodsType.Default;
+                break;
+        }
+        ShowGoodsByType();
+       // currentType = beChooseType;
+    }
+    //根据类别来显示物品
+    private void ShowGoodsByType()
+    {
+        //显示全部
+        if (beChooseType == E_GoodsType.Default)
+        {
+            for (int i = 0; i < content.childCount; i++)
+            {
+                if (content.GetChild(i).gameObject.activeInHierarchy==false)
+                {
+                    content.GetChild(i).gameObject.SetActive(true);
+                }
+            }
+        }
+        else//显示其他类型
+        {
+            for (int i = 0; i < content.childCount; i++)
+            {
+                if (content.GetChild(i).GetComponent<GoodsEntity>().type == beChooseType)
+                {
+                    content.GetChild(i).gameObject.SetActive(true);
+                }
+                else
+                {
+                    content.GetChild(i).gameObject.SetActive(false);
+                }
+            }
+        }
+    }
+   IEnumerator InitPack()
+    {
+        yield return  new WaitForEndOfFrame();
+        GameObject goods;
+        string iconName;
+        for (int i = 0; i < 22; i++)
+        {  
+          //生成一个物品
+          goods =  Instantiate(goodsPrefab);
+           //放在content下面
+          GameTool.AddChildToParent(content, goods.transform);
+           //通过读取配置表,获取图片的名称
+          iconName = DataController.Instance.ReadCfg("IconName",i+1,DataController.Instance.dicPack);
+          GameTool.GetTheChildComponent<Image>(goods, "Img_Goods").sprite = Resources.Load<Sprite>("PackSprite/"+ iconName);
+          GoodsEntity entity= goods.AddComponent<GoodsEntity>();
+          entity.goodsId = i + 1;
+          //读取配置表,给物品的类型赋值
+          int typeIndex =int.Parse( DataController.Instance.ReadCfg("Type",i+1,DataController.Instance.dicPack));
+          entity.type = (E_GoodsType)typeIndex;
+           //在内存里面读取物品数量
+          int count = PackData.Instance.ReadCountById((i+1).ToString());
+            GameTool.GetTheChildComponent<Text>(goods, "Txt_Count").text= count.ToString();
+
+        }
+    }
+    private void ReturnUI()
+    {
+        UIManager.Instance.ReturnBeforeUI(this.BeforeUiId);
+    }
+}
